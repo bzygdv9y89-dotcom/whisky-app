@@ -1,5 +1,195 @@
+// src/data.js
 export const whiskyData = [
-  { id: 1, name: "Basil Hayden's", region: "Bourbon / Kentucky", short: "Light, approachable bourbon", abv: "40%" },
-  { id: 2, name: "Eagle Rare", region: "Bourbon / Kentucky", short: "Rich sweetness, caramel", abv: "45%" }
-  // add the rest of your whisky objects here (or paste the full list)
+  {
+    id: 1,
+    name: "Basil Hayden's",
+    region: "Bourbon / Kentucky",
+    scent: "Mild caramel, vanilla, light spice",
+    taste: "Soft sweetness, honey, gentle oak",
+    short: "A low-risk bourbon with high buy-in. Great for onboarding new taste stakeholders.",
+    long: "A light, approachable bourbon focused on balance and softness. Ideal as an entry point for tasters of all levels.",
+    image: "/images/basil_haydens.jpg",
+    smoke: 1,
+    abv: "40%"
+  },
+  {
+    id: 2,
+    name: "Eagle Rare",
+    region: "Bourbon / Kentucky",
+    scent: "Vanilla, candied fruit, light tobacco",
+    taste: "Rich sweetness, orange peel, caramel, spiced oak",
+    short: "Premium value proposition with clear caramel synergy and a strong finish pipeline.",
+    long: "A characterful bourbon delivering depth and elegance in both nose and palate. Prominent fruit sweetness and well-integrated oak.",
+    image: "/images/eagle_rare.jpg",
+    smoke: 1,
+    abv: "45%"
+  },
+  {
+    id: 3,
+    name: "Redbreast 21",
+    region: "Irish / Single Pot Still",
+    scent: "Tropical fruit, nuts, honey, warm spice",
+    taste: "Silky, fruity sweetness, almonds, vanilla, spice",
+    short: "Flagship whisky delivering an end-to-end luxury experience. Ultimate stakeholder satisfaction.",
+    long: "One of the most celebrated Irish single pot still whiskies. Deep, complex and velvety with a long elegant finish.",
+    image: "/images/redbreast_21.jpg",
+    smoke: 1,
+    abv: "46%"
+  },
+  {
+    id: 4,
+    name: "Craigellachie 2013/2025 (Lady of the Glen) 12",
+    region: "Speyside",
+    scent: "Green fruit, malt, citrus, vanilla",
+    taste: "Powerful fruit, waxy notes, oak, malty sweetness",
+    short: "High-impact Speyside with strong fruit bandwidth. Low change management required.",
+    long: "An intense and aromatic Speyside whisky with a pronounced fruit profile and robust malt structure. Cask strength adds depth.",
+    image: "/images/craigellachie_lady_of_the_glen.jpg",
+    smoke: 2,
+    abv: "60.5%"
+  },
+  {
+    id: 5,
+    name: "Yamazaki 12",
+    region: "Japan / Single Malt",
+    scent: "Ripe peach, honey, sandalwood",
+    taste: "Soft fruit, sweet malt, floral notes",
+    short: "Lean, elegant and extremely well-structured — like Japanese project management in liquid form.",
+    long: "An iconic Japanese single malt known for its precision and nuanced fruit character. Harmonious and complex.",
+    image: "/images/yamazaki_12.jpg",
+    smoke: 1,
+    abv: "43%"
+  },
+  {
+    id: 6,
+    name: "Nikka 12",
+    region: "Japan / Blended",
+    scent: "Dried fruit, light smoke, spiced oak",
+    taste: "Balanced fruit, mellow sweetness, subtle dryness",
+    short: "A balanced leadership blend — transparent governance, no silo thinking.",
+    long: "A sophisticated blended whisky combining Japanese finesse with depth and structure. Harmonious and eminently drinkable.",
+    image: "/images/nikka_12.jpg",
+    smoke: 1,
+    abv: "43%"
+  },
+  {
+    id: 7,
+    name: "The Observatory 20 (Signature Series)",
+    region: "Single Grain",
+    scent: "Vanilla, banana, cream toffee",
+    taste: "Mild, creamy grain sweetness with light oak",
+    short: "Soft as a slide deck: easy to drink, easy to implement.",
+    long: "A mature grain whisky with a light, creamy texture and delicate sweetness. Approachable and polished.",
+    image: "/images/observatory_20.jpg",
+    smoke: 1,
+    abv: "40%"
+  },
+  {
+    id: 8,
+    name: "Old Particular Cambus 35",
+    region: "Single Grain (35 years)",
+    scent: "Fudge, vanilla, tropical fruit, creme brulee",
+    taste: "Silky caramel, coconut, mature sweetness",
+    short: "A 35-year grain offering maximum ROI on sweetness and maturity. Zero technical debt.",
+    long: "A luxurious old grain whisky with remarkable silkiness and depth. Sweet, complex and long on the finish.",
+    image: "/images/cambus_35.jpg",
+    smoke: 1,
+    abv: "~48%"
+  },
+  {
+    id: 9,
+    name: "Caol Ila 12",
+    region: "Islay",
+    scent: "Light smoke, citrus, sea air, green apple",
+    taste: "Mild peat, lemon zest, malty sweetness, mineral finish",
+    short: "Entry-level Islay peat with low friction and high adoption rate.",
+    long: "An elegant Islay malt with balanced peat and fresh citrus notes. Accessible yet complex.",
+    image: "/images/caol_ila_12.jpg",
+    smoke: 6,
+    abv: "43%"
+  },
+  {
+    id: 10,
+    name: "Ardbeg An Oa (Monsters of Smoke)",
+    region: "Islay",
+    scent: "Rounded smoke, chocolate, spicy sweetness",
+    taste: "Creamy smoke, toffee, licorice",
+    short: "Rounded stakeholder experience — smooth peaty balance.",
+    long: "A softer, more rounded Ardbeg produced by vatting various cask types. Harmonious and user-friendly peat.",
+    image: "/images/ardbeg_an_oa.jpg",
+    smoke: 8,
+    abv: "46%"
+  },
+  {
+    id: 11,
+    name: "Ardbeg 10 (Monsters of Smoke)",
+    region: "Islay",
+    scent: "Classic Ardbeg smoke, lime, tar, sea spray",
+    taste: "Intense peat, citrus, black pepper",
+    short: "The classic baseline: peat with clear KPIs — citrus and tar.",
+    long: "One of Islay's iconic peated malts. Intense and clean peat balanced by citrus and malt.",
+    image: "/images/ardbeg_10.jpg",
+    smoke: 9,
+    abv: "46%"
+  },
+  {
+    id: 12,
+    name: "Ardbeg Wee Beastie 5 (Monsters of Smoke)",
+    region: "Islay",
+    scent: "Raw peat, black pepper, fresh lime",
+    taste: "Aggressive peat, peppery, sharp citrus",
+    short: "Aggressive, young, \"move fast and break things\" whisky. Pure disruption.",
+    long: "A young, high-energy Ardbeg with pronounced peat and a lively citrus backbone. Designed for maximum impact.",
+    image: "/images/ardbeg_wee_beastie.jpg",
+    smoke: 10,
+    abv: "47.4%"
+  },
+  {
+    id: 13,
+    name: "Lagavulin 16",
+    region: "Islay",
+    scent: "Tar, peat, dried fruit",
+    taste: "Deep rounded smoke, raisins, caramel, sea salt",
+    short: "The legacy system that still outperforms: tar, deep smoke and enterprise stability.",
+    long: "A world-class classic. Deep, complex smoke complemented by sweet dark fruits and an exceptionally long finish.",
+    image: "/images/lagavulin_16.jpg",
+    smoke: 10,
+    abv: "43%"
+  },
+  {
+    id: 14,
+    name: "MacNair's Lum Reek 10",
+    region: "Blended Malt",
+    scent: "Hearty smoke, fruit compote, oak",
+    taste: "Peated drive, fruit and spice",
+    short: "Peated blended malt with high-octane smoke and layered complexity. Great for agile taste sprints.",
+    long: "A blended malt with assertive peat and a rounded fruit character. Robust and flavorful.",
+    image: "/images/macnairs_lum_reek.jpg",
+    smoke: 8,
+    abv: "55.4%"
+  },
+  {
+    id: 15,
+    name: "Laphroaig 10",
+    region: "Islay",
+    scent: "Medicinal smoke, iodine, seaweed",
+    taste: "Powerful peat, vanilla, salt",
+    short: "Not all stakeholders will be aligned — but those who are will love it.",
+    long: "A highly characterful Islay malt known for its medicinal peat and maritime-sweet balance. Bold and distinctive.",
+    image: "/images/laphroaig_10.jpg",
+    smoke: 10,
+    abv: "40%"
+  },
+  {
+    id: 16,
+    name: "Laphroaig 10 Cask Strength 2023",
+    region: "Islay / Cask Strength",
+    scent: "Brutal peat, warm spices, concentrated smoke",
+    taste: "Explosive peat, pepper, deep sweetness",
+    short: "Nuclear-grade peat. A whisky that defines the roadmap.",
+    long: "A powerful cask-strength release offering maximal peat intensity and depth. Robust, uncompromising and complex.",
+    image: "/images/laphroaig_10_cs_2023.jpg",
+    smoke: 11,
+    abv: "58.3%"
+  }
 ];
