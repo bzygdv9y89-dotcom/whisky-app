@@ -1,3 +1,58 @@
+// token-protection snippet (indsæt øverst i src/App.jsx)
+import React, { useState, useEffect } from "react";
+
+function TokenGate({ children }) {
+  const [ok, setOk] = useState(false);
+  const [entered, setEntered] = useState("");
+  const tokenFromEnv = import.meta.env.VITE_ACCESS_TOKEN || "";
+
+  useEffect(() => {
+    // tjek om token i url matcher
+    const params = new URLSearchParams(window.location.search);
+    const t = params.get("token");
+    if (t && tokenFromEnv && t === tokenFromEnv) {
+      setOk(true);
+      // evt. gem i sessionStorage så brugeren ikke skal gentage
+      sessionStorage.setItem("site_token_ok", "1");
+      return;
+    }
+    // tjek om vi allerede har godkendelse i session
+    if (sessionStorage.getItem("site_token_ok") === "1") {
+      setOk(true);
+    }
+  }, [tokenFromEnv]);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (entered && tokenFromEnv && entered === tokenFromEnv) {
+      sessionStorage.setItem("site_token_ok", "1");
+      setOk(true);
+    } else {
+      alert("Forkert kode. Tjek URL eller prøv igen.");
+    }
+  };
+
+  if (ok) return <>{children}</>;
+
+  // Vis en lille gate UI
+  return (
+    <div style={{ minHeight: "100vh", display: "flex", alignItems: "center", justifyContent: "center", padding: 20 }}>
+      <div style={{ maxWidth: 480, width: "100%", background: "white", padding: 20, borderRadius: 8, boxShadow: "0 6px 20px rgba(0,0,0,0.06)" }}>
+        <h2 style={{ marginTop: 0 }}>Adgangskode kræves</h2>
+        <p>Du kan åbne linket med token i URL: <code>?token=DINHEMMELIGETOKEN</code> eller indtaste koden her.</p>
+        <form onSubmit={handleSubmit}>
+          <input value={entered} onChange={(e)=>setEntered(e.target.value)} placeholder="Indtast kode" style={{ width: "100%", padding: 8, marginBottom: 8 }} />
+          <div style={{ display: "flex", gap: 8 }}>
+            <button type="submit" style={{ padding: "8px 12px" }}>Åbn</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  );
+}
+
+export default TokenGate;
+
 // src/App.jsx
 import React, { useState, useEffect } from "react";
 import { whiskyData } from "./data.js";
